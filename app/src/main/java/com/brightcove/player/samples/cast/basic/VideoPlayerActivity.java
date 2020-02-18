@@ -2,12 +2,13 @@ package com.brightcove.player.samples.cast.basic;
 
 import android.content.res.Configuration;
 import android.os.Bundle;
-import androidx.annotation.Nullable;
-import androidx.core.view.ViewCompat;
-import androidx.appcompat.app.ActionBar;
 import android.text.TextUtils;
 import android.view.Menu;
 import android.widget.TextView;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
+import androidx.core.view.ViewCompat;
 
 import com.brightcove.cast.GoogleCastComponent;
 import com.brightcove.cast.GoogleCastEventType;
@@ -38,7 +39,9 @@ public class VideoPlayerActivity extends BrightcovePlayerActivity {
         ViewCompat.setTransitionName(baseVideoView, getString(R.string.transition_image));
 
         String videoId = getIntent().getStringExtra(VideoPlayerActivity.INTENT_EXTRA_VIDEO_ID);
-        Catalog catalog = new Catalog(baseVideoView.getEventEmitter(), getString(R.string.account), getString(R.string.policy));
+        String account = getString(R.string.account);
+        String policyKey = getString(R.string.policy);
+        Catalog catalog = new Catalog(baseVideoView.getEventEmitter(), account, policyKey);
         catalog.findVideoByID(videoId, new VideoListener() {
             @Override
             public void onVideo(Video video) {
@@ -76,7 +79,8 @@ public class VideoPlayerActivity extends BrightcovePlayerActivity {
             }
         });
 
-        GoogleCastComponent googleCastComponent = new GoogleCastComponent(eventEmitter, this);
+        CustomBrightcoveCastMediaManager customBrightcoveCastMediaManager = new CustomBrightcoveCastMediaManager( this, eventEmitter, account, policyKey);
+        GoogleCastComponent googleCastComponent = new GoogleCastComponent(eventEmitter, this, customBrightcoveCastMediaManager);
 
         //You can check if there is a session available
         googleCastComponent.isSessionAvailable();
