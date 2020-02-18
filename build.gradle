@@ -4,6 +4,9 @@ buildscript {
     repositories {
         google()
         jcenter()
+        maven {
+            url 'http://repo.brightcove.com/releases'
+        }
         
     }
     dependencies {
@@ -18,7 +21,9 @@ allprojects {
     repositories {
         google()
         jcenter()
-        
+        maven {
+            url 'http://repo.brightcove.com/releases'
+        }
     }
 }
 
