@@ -10,13 +10,13 @@
     <string name="media_route_menu_title">Play on&#8230;</string>
 
     <!-- A sample Brightcove Edge Account ID -->
-    <string name="account">3636334163001</string>
+    <string name="account">5420904993001</string>
 
     <!-- A sample Brightcove Edge Policy Key -->
-    <string name="policy">BCpkADawqM1ZEczFURHXFgdyqvGPj4GWHEQka6QIs7hOwSFPffq-UI_ntgaa29FEMKY87rAd0jptOZHueqyDxjVBTGmfek97TLHSLPqJKWAmKx_YSiHdLdLp8uq9hhwTWs6qJIOkN9cA0qqp</string>
+    <string name="policy">BCpkADawqM1RJu5c_I13hBUAi4c8QNWO5QN2yrd_OgDjTCVsbILeGDxbYy6xhZESTFi68MiSUHzMbQbuLV3q-gvZkJFpym1qYbEwogOqKCXK622KNLPF92tX8AY9a1cVVYCgxSPN12pPAuIM</string>
 
     <!-- A sample Brightcove Playlist Reference ID -->
-    <string name="playlistRefId">cast_playlist_non_drm</string>
+    <string name="playlistRefId">demo_odrm_widevine_dash</string>
 
 
     <string name="media_title">Big Buck Bunny</string>
